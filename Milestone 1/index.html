@@ -30,9 +30,15 @@
                 </div>
 
                 <div class="list_to_do">
-                    <div class="list">
-                        <span>Fare i compiti</span>
-                    </div>
+                    <ul>
+                        <li 
+                        v-for="todo in toDoS" 
+                        class="list"
+                        :class="{'done': todo.done}"
+                        >
+                            {{ todo.text }}
+                        </li>
+                    </ul>
                 </div>
             </main>
         </div>

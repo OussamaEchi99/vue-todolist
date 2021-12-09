@@ -11,6 +11,10 @@
     margin: auto;
 }
 
+li{
+    list-style-type: none;
+}
+
 /* HEADER */
 header{
     display: flex;
@@ -57,4 +61,9 @@ main{
 .list{
     padding: 10px 10px;
     border-bottom: 1px solid lightgray;
+}
+
+/* DONE */
+.done{
+    text-decoration: line-through;
 }
