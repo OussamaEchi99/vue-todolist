@@ -1,0 +1,60 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* COMMON */
+.container{
+    width: 60%;
+    margin: auto;
+}
+
+/* HEADER */
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+.logo img{
+    width: 65%;
+    height: 100%;
+}
+
+/* MAIN */
+main{
+    margin: 20px 0;
+}
+
+/* FILTERS */
+.add_list_to_do{
+    display: flex;
+    justify-content: center;
+}
+
+.add_list_to_do *{
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+/* LIST TO DO */
+.list_to_do{
+    margin: 50px 0;
+    padding: 50px 20px;
+    font-size: 20px;
+    background-color: #f4f6f6;
+    border-radius: 10px;
+}
+
+.list{
+    padding: 10px 10px;
+    border-bottom: 1px solid lightgray;
+}
