@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="root">
+        <div class="container">
+            <header>
+                <div class="logo">
+                    <img src="img/Microsoft-To-Do-on-Windows-7.png" alt="Microsoft To Do on Windows Logo">
+                </div>
+            </header>
+
+            <main>
+                <div class="Filters">
+                    <div class="add_list_to_do">
+                        <input @keyup.enter="deletedSpaceNewText" v-model="newToDo" type="text" placeholder="Cosa vorresti annotare?">
+                        <button @click="deletedSpaceNewText">Aggiungi</button>
+                    </div>
+                </div>
+
+                <div class="list_to_do">
+                    <ul>
+                        <li 
+                        v-for="(todo, index) in toDoS" 
+                        class="list"
+                        :class="{'done': todo.done}"
+                        @click="toggleDone(index)"
+                        >
+                            <span>{{ todo.text }}</span>
+
+                            <div class="delete_to_do">
+                                <i @click="deleteToDo(index)" class="fas fa-times"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
